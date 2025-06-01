@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landon Badstibner</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --accent: #0066ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Inter", system-ui, sans-serif;
+      line-height: 1.5;
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      margin: 0 0.75rem;
+      text-decoration: none;
+      color: var(--fg);
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 1px;
+      background: var(--fg);
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+      transform-origin: left;
+    }
+
+    nav a:hover::after,
+    nav a:focus::after {
+      transform: scaleX(1);
+    }
+
+    .contact {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .contact a {
+      text-decoration: none;
+      color: var(--fg);
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    .contact a:hover,
+    .contact a:focus {
+      opacity: 0.6;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 1rem;
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Landon&nbsp;Badstibner</h1>
+
+    <nav>
+      <a href="projects.html">projects</a>
+    </nav>
+
+    <!-- Contact links -->
+    <div class="contact">
+      <a href="mailto:landonbads@gmail.com">email</a>
+      <a href="https://www.linkedin.com/in/landonbadstibner/" target="_blank" rel="noopener">linkedin</a>
+    </div>
+  </main>
+
+  <footer>© 2025 Landon Badstibner</footer>
+</body>
+</html>
